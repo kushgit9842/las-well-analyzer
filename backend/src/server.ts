@@ -13,7 +13,8 @@ const PORT = process.env.PORT || 5050;
 // 🔥 ENABLE CORS (THIS WAS MISSING)
 app.use(
   cors({
-    origin: "http://localhost:5173"
+    origin: process.env.FRONTEND_URL || "*",
+    credentials: true,
   })
 );
 
